@@ -1,0 +1,41 @@
+### Tes 1: GET semua data
+GET http://localhost:8080/api/umkm
+
+### Tes 2: POST tambah data (valid)
+POST http://localhost:8080/api/umkm
+Content-Type: application/x-www-form-urlencoded
+
+nama_umkm=Kopi Nusantara&pemilik=Radit&alamat=Sampit&kategori=Minuman&kontak=08123456789
+
+### Tes 3: POST gagal (nama kosong)
+POST http://localhost:8080/api/umkm
+Content-Type: application/x-www-form-urlencoded
+
+nama_umkm=&pemilik=Radit
+
+### Tambah data 2
+POST http://localhost:8080/api/umkm
+Content-Type: application/x-www-form-urlencoded
+
+nama_umkm=Sasirangan Banjar&pemilik=Radit&alamat=Banjarmasin&kategori=Fashion&kontak=08111111111
+
+### Tambah data 3
+POST http://localhost:8080/api/umkm
+Content-Type: application/x-www-form-urlencoded
+
+nama_umkm=Keripik Pisang&pemilik=Radit&alamat=Sampit&kategori=Makanan&kontak=08222222222
+
+### Tes 4: GET satu data
+GET http://localhost:8080/api/umkm/1
+
+### Tes 5: PUT ubah data
+PUT http://localhost:8080/api/umkm/1
+Content-Type: application/x-www-form-urlencoded
+
+nama_umkm=Kopi Nusantara Baru&pemilik=Radit&alamat=Sampit&kategori=Minuman&kontak=08123456789
+
+### Tes 6: DELETE
+DELETE http://localhost:8080/api/umkm/1
+
+### Tes 7: DELETE lagi (harus 404)
+DELETE http://localhost:8080/api/umkm/1

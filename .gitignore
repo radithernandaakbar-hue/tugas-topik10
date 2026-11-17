@@ -1,0 +1,5 @@
+*.sqlite
+.env
+screenshot/
+*.docx
+*.pdf
